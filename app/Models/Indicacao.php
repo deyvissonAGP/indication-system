@@ -10,6 +10,7 @@ class Indicacao extends Model
     use HasFactory;
     
     protected $table = 'indicacoes';
+    protected $guarded = ['id'];
 
     protected $fillable = [
         'nome', 'cpf', 'telefone', 'email'

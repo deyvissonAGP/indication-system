@@ -10,13 +10,13 @@ class Status extends Model
     use HasFactory;
     
     protected $table = 'status';
+    protected $primaryKey  = 'id';
 
     protected $fillable = [
         'descricao'
     ];
-
-    public function indicacoes()
-    {
-        
-    }
+    
+    const INICIADA    = 1;
+    const EM_PROCESSO = 2;
+    const FINALIZADA  = 3;
 }

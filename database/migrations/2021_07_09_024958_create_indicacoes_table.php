@@ -14,7 +14,7 @@ class CreateIndicacoesTable extends Migration
     public function up()
     {
         Schema::create('indicacoes', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
 
             $table->foreignId('status_id')->constrained('status');
             $table->string('nome');
