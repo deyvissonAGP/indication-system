@@ -89,7 +89,6 @@ class IndicacaoService
                 'required',
                 'min:5',
                 'string',
-                new IndicacaoUnique('indicacoes', $id),
             ],
             'cpf' => [
                 'required',
@@ -97,11 +96,13 @@ class IndicacaoService
                 new IndicacaoUnique('indicacoes', $id),
             ],
             'telefone' => [
-                new IndicacaoUnique('indicacoes', $id),
+                'required',
+                'numeric',  
             ],
             'email' => [
                 new IndicacaoUnique('indicacoes', $id),
             ],
+            
         ]);
 
         if ($validator->fails()) {
@@ -134,13 +135,12 @@ class IndicacaoService
      * @return String
      */
     public function saveIndicacao($data)
-    {
+    {   
         $validator = Validator::make($data, [
             'nome' => [
                 'required',
                 'min:5',
                 'string',
-                new IndicacaoUnique('indicacoes'),
             ],
             'cpf' => [
                 'required',
@@ -148,7 +148,8 @@ class IndicacaoService
                 new IndicacaoUnique('indicacoes'),
             ],
             'telefone' => [
-                new IndicacaoUnique('indicacoes'),
+                'required',
+                'numeric',
             ],
             'email' => [
                 new IndicacaoUnique('indicacoes'),

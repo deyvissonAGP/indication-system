@@ -80,7 +80,7 @@ class IndicacaoRepository
         $indicacao->cpf = $data['cpf'];
         $indicacao->telefone = $data['telefone'];
         $indicacao->email = $data['email'];
-        $indicacao->status_id = 2;
+        $indicacao->status_id =  $data['status_id'];
 
         $indicacao->update();
 
