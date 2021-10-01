@@ -52,4 +52,4 @@ Para ver os endpoints funcionando, será necessário usar o Postman ou outro de 
 
 
 ## Repository Design Pattern
-Foi utilizado o Repositort Pattern no desenvolvimento do Projeto. O Repository Pattern permite um encapsulamento da lógica de acesso a dados, impulsionando o uso da injeção de dependencia (DI) e proporcionando uma visão mais orientada a objetos das interações com a DAL.
+Foi utilizado o Repository Pattern no desenvolvimento do Projeto. O Repository Pattern permite um encapsulamento da lógica de acesso a dados, impulsionando o uso da injeção de dependencia (DI) e proporcionando uma visão mais orientada a objetos das interações com a DAL.
